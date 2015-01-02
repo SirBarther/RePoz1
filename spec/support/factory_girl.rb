@@ -7,4 +7,8 @@ FactoryGirl.define do
     password_confirmation 'password'
   end
 
+	RSpec.configure do |config|
+	  config.include FactoryGirl::Syntax::Methods
+	end
+	
 end

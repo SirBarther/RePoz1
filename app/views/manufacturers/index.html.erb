@@ -1,0 +1,7 @@
+<h1> Manufacturers / Index </h1>
+
+<h3><%= link_to 'New Manufacturer', new_manufacturer_path %></h3>
+
+<% @man_u.each do |man_u| %>
+<h4> <%= link_to man_u.name, manufacturer_path(man_u.id) %></h3>
+<% end %>
