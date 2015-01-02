@@ -30,16 +30,19 @@ feature 'sales posts a new manufacturer', %Q{
 } do
 
 
-	scenario ' ** Sales successfully posts a new manufacturer ** ' do
+	scenario ' ** Sales successfully posts a new car ** ' do
 
-	man_u = FactoryGirl.create(:manufacturer)
+	car = FactoryGirl.create(:car)
 
 	visit	root_path
 
-	click_on "New Manufacturer"
+	click_on "New Car"
 
-	fill_in 'Name', with: man_u.name
-	fill_in 'Country', with: man_u.country
+	fill_in 'Manufacturer', with: car.mid
+	fill_in 'Model', with: car.mname
+	fill_in 'Color', with: car.color
+	fill_in 'Year', with: car.year
+	fill_in 'Mileage', with: car.mileage
 
 	click_button 'submit'
 

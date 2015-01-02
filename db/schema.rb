@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20150102163926) do
 
   create_table "cars", force: :cascade do |t|
     t.integer  "mid",         null: false
+    t.string   "mname",       null: false
     t.text     "color",       null: false
     t.integer  "year",        null: false
     t.integer  "mileage",     null: false

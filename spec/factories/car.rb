@@ -1,8 +1,9 @@
 FactoryGirl.define do
 	factory :car do
 		mid '2'
-		color 'test'
-		year '1996'
+		mname 'Model'
+		color 'Test'
+		year '2000'
 		mileage '12345'
 		description 'Test Description'
 	end
