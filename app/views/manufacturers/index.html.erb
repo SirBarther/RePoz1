@@ -1,7 +1,8 @@
-<h1> Manufacturers / Index </h1>
-
-<h3><%= link_to 'New Manufacturer', new_manufacturer_path %></h3>
-
+<h1> Index of Manufacturers </h1>
+<h5><%= link_to 'Create a New Manufacturer', new_manufacturer_path %></h5>
+<h5> Click on a manufacturer to add a vehicle or check inventory</h5>
 <% @man_u.each do |man_u| %>
-<h4> <%= link_to man_u.name, manufacturer_path(man_u.id) %></h3>
+<ul>
+<h6> <%= link_to man_u.name, manufacturer_path(man_u.id) %></h3>
+</ul>
 <% end %>

@@ -10,15 +10,19 @@
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="/">CarListings</a></h1>
+        <h1><a href="/">Car Listings: Find a car for you</a></h1>
       </li>
     </ul>
 
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
+          <li><%= link_to 'Cars', root_path %></li>
+          <li><%= link_to 'Manufacturers', manufacturers_path %></li>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
+          <li><%= link_to 'Cars', root_path %></li>
+          <li><%= link_to 'Manufacturers', manufacturers_path %></li>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
         <%- end -%>

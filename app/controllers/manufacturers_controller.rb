@@ -6,6 +6,7 @@ class ManufacturersController < ApplicationController
 
   def new
   	@man_u = Manufacturer.new
+    @car = Car.new
   end
 
   def create
@@ -28,4 +29,5 @@ class ManufacturersController < ApplicationController
 	def man_u_params
 		params.require(:manufacturer).permit(:name, :country)
 	end
+
 end

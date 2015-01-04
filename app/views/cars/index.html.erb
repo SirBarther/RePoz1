@@ -1,0 +1,6 @@
+<% @car.each do |car| %>
+<ul>
+	<%= link_to car.mname, manufacturer_car_path(car.mid, car.id) %>
+</ul>
+<% end %>
+

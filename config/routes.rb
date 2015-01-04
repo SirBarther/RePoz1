@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   
-  root 'manufacturers#index'
+  root 'cars#index'
   
   devise_for :users
 
   resources :manufacturers do 
+  	resources :cars
   end
 
 end
