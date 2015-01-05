@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-feature 'sales posts a new manufacturer', %Q{
+feature "sales posts a new manufacturer", %Q{
 	
 	As a car salesperson
 	
@@ -22,7 +22,7 @@ feature 'sales posts a new manufacturer', %Q{
 } do
 
 
-	scenario ' ** Sales successfully posts a new manufacturer ** ' do
+	scenario " ** Sales successfully posts a new manufacturer ** " do
 
 	man_u = FactoryGirl.create(:manufacturer)
 
@@ -31,26 +31,26 @@ feature 'sales posts a new manufacturer', %Q{
 	click_on "Manufacturers"
 	click_on "Create a New Manufacturer"
 
-	fill_in 'Name', with: man_u.name
-	fill_in 'Country', with: man_u.country
+	fill_in "Name", with: man_u.name
+	fill_in "Country", with: man_u.country
 
-	click_button 'submit'
+	click_button "submit"
 
-	expect(page).to have_content('Your Manufacturer was successfully posted.')
+	expect(page).to have_content("Your Manufacturer was successfully posted.")
 
 	end
 
-	scenario ' ** Sales unsuccessfully posts a new manufacturer **' do
+	scenario " ** Sales unsuccessfully posts a new manufacturer **" do
 
 	visit	root_path
 
-	click_on "New Manufacturer"
+	click_on "Manufacturers"
 
-	click_button 'submit'
+	click_on "Create a New Manufacturer"
 
-	save_and_open_page
+	click_button "submit"
 
-	expect(page).to have_content('SO SRY')		
+	expect(page).to have_content("SO SRY")		
 
 	end
 
