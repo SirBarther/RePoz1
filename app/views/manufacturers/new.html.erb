@@ -17,7 +17,7 @@
 
 	<% if @man_u.errors.any? %>
   	<div id="error_explanation">
-    <h2><%= pluralize(@man_u.errors.count, "error") %> SO SRY:</h2>
+    <h4><%= pluralize(@man_u.errors.count, "error") %>: Please review</h4>
   	
   	<ul>
   	<% @man_u.errors.full_messages.each do |msg| %>

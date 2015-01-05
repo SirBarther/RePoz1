@@ -5,27 +5,27 @@
 	<%= f.hidden_field :mid, value: @mid %>
 	
 	<div>
-		<%= f.label :mname, 'Model' %>
+		<%= f.label :mname, "Model (Required)" %>
 		<%= f.text_field :mname %>
 	</div>
 	
 	<div>
-		<%= f.label :color %>
+		<%= f.label :color, "Color (Required)" %>
 		<%= f.text_field :color %>
 	</div>
 
 	<div>
-		<%= f.label :year %>
+		<%= f.label :year, "Year (Must be greater than 1920)" %>
 		<%= f.text_field :year %>
 	</div>
 
 	<div>
-		<%= f.label :mileage %>
+		<%= f.label :mileage, "Mileage (Required)" %>
 		<%= f.text_field :mileage %>
 	</div>
 	
 	<div>
-		<%= f.label :description %>
+		<%= f.label :description, "Description (Optional)" %>
 		<%= f.text_area :description %>
 	</div>
 
@@ -37,7 +37,7 @@
 
 	<% if @car.errors.any? %>
   	<div id="error_explanation">
-    <h2><%= pluralize(@car.errors.count, "error") %> SO SRY:</h2> 	
+    <h4><%= pluralize(@car.errors.count, "error") %>: Please review </h4> 	
   	
   	<ul>
   	<% @car.errors.full_messages.each do |msg| %>

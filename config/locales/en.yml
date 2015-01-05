@@ -19,5 +19,34 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+# en:
+#   hello: "Hello world"
+# config/locales/en.yml
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      car:
+        mname: "Model Name"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "can't be blank"
+
+
+# config/locales/en.yml
+# en:
+#   activerecord:
+#     attributes:
+#       user:
+#         email: "E-mail address"
+#     errors:
+#       models:
+#         user:
+#           attributes:
+#             email:
+#               blank: "is required"
+
+
+
