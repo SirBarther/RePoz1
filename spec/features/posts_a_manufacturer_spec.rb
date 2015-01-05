@@ -28,7 +28,8 @@ feature 'sales posts a new manufacturer', %Q{
 
 	visit	root_path
 
-	click_on "New Manufacturer"
+	click_on "Manufacturers"
+	click_on "Create a New Manufacturer"
 
 	fill_in 'Name', with: man_u.name
 	fill_in 'Country', with: man_u.country
