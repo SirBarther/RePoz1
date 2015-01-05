@@ -1,44 +1,31 @@
-<h1> Cars / New </h1>
-
-<%= form_for ([@mid, @car]) do |f| %>
-	
-	<%= f.hidden_field :mid, value: @mid %>
-	
+<%= form_for ([@mid, @car]) do |f| %>	
+	<%= f.hidden_field :mid, value: @mid %>	
 	<div>
 		<%= f.label :mname, "Model (Required)" %>
 		<%= f.text_field :mname %>
 	</div>
-	
 	<div>
 		<%= f.label :color, "Color (Required)" %>
 		<%= f.text_field :color %>
 	</div>
-
 	<div>
 		<%= f.label :year, "Year (Must be greater than 1920)" %>
 		<%= f.text_field :year %>
 	</div>
-
 	<div>
 		<%= f.label :mileage, "Mileage (Required)" %>
 		<%= f.text_field :mileage %>
 	</div>
-	
 	<div>
 		<%= f.label :description, "Description (Optional)" %>
 		<%= f.text_area :description %>
 	</div>
-
 	<div>
 	<%= f.submit "submit" %>
-	
 	</div>
-
-
 	<% if @car.errors.any? %>
   	<div id="error_explanation">
     <h4><%= pluralize(@car.errors.count, "error") %>: Please review </h4> 	
-  	
   	<ul>
   	<% @car.errors.full_messages.each do |msg| %>
   		<li><%= msg %></li>
@@ -46,5 +33,4 @@
   	</ul>
   	</div>
   <% end %>
-
 <% end %>

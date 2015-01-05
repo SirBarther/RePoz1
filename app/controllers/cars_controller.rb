@@ -16,18 +16,16 @@ class CarsController < ApplicationController
 
 	def create
 		@mid = Manufacturer.find(params[:manufacturer_id])
-		@car = Car.new(car_params)
+		@car = Car.new(car_params)	
 		if @car.save
 			redirect_to manufacturer_cars_path, notice: 
-
 			"Your car was successfully posted."
 		else
-		render :new
+			render :new
 		end	
 	end
 
 	private
-
 	def car_params
 		params.require(:car).permit(:mid, :mname, :color, :year, :mileage, :description)
 	end

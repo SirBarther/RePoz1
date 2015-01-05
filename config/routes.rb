@@ -1,9 +1,6 @@
-Rails.application.routes.draw do
-  
+Rails.application.routes.draw do 
   root 'cars#index'
-
   resources :manufacturers do 
   	resources :cars
   end
-
 end

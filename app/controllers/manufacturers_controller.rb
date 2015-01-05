@@ -16,7 +16,7 @@ class ManufacturersController < ApplicationController
 
 			"Your Manufacturer was successfully posted."
 		else
-		render new_manufacturer_path
+		  render new_manufacturer_path
 		end	
   end
 

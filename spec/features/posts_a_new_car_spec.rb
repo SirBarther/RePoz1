@@ -29,7 +29,6 @@ feature "sales posts a new manufacturer", %Q{
 
 } do
 
-
 	scenario " ** Sales successfully posts a new car ** " do
 
 	car = FactoryGirl.create(:car)
@@ -42,7 +41,6 @@ feature "sales posts a new manufacturer", %Q{
 	click_on "Test 2"
 
 	click_on "Create a new"
-
 
 	fill_in "Model", with: car.mname
 	fill_in "Color", with: car.color
